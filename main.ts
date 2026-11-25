@@ -1,7 +1,9 @@
 // The Agent's Uh-Oh — make.fun entry.
 // One word an agent says when it has no idea what to do, written to
 // /output/entry.txt. Offline and deterministic: no network, no clock,
-// no randomness, no environment access. The program only emits the word.
+// no randomness, no environment access. The program only emits the word,
+// with no trailing newline, so entry.txt holds exactly the 12 bytes
+// of the word and nothing the gate would count extra.
 import * as fs from "node:fs";
 
 // Why this word: the judge weighs, in order, on-subject fit, a laugh
